@@ -40,7 +40,7 @@ int main() {
     printStr << std::endl;
 
     // Payout
-    uint32_t totalPayout = calculatePayout(view);
+    uint32_t totalPayout = calculatePayout(view, printStr);
     printPayout(totalPayout, printStr);
 
     // Single print output

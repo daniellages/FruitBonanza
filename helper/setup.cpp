@@ -45,5 +45,5 @@ void printGrid(const std::array<std::array<GridItem, 6>, 5>& grid, std::ostrings
 
 // Print Payout
 void printPayout(uint32_t payout, std::ostringstream& printStr) {
-    printStr << "Total Payout: " << std::to_string(payout) << std::endl;
+    printStr << "Total Payout: " << std::to_string(payout) << "%" << std::endl;
 }

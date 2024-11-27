@@ -10,6 +10,38 @@
 // Local Variable
 const uint32_t totalItems = 10;
 
+struct ItemDetails {                                                        // Match string to details
+    std::string name;
+    std::string icon;
+    std::map<uint32_t, uint32_t> payout;
+};
+
+const std::array<std::map<uint32_t, uint32_t>, totalItems> allPayouts = {{  // Define allPayouts
+    {{8, 1000}, {10, 2500}, {12, 5000}}, // Red Gem
+    {{8, 250}, {10, 1000}, {12, 2500}},  // Pink Gem
+    {{8, 200}, {10, 500}, {12, 1500}},   // Green Gem
+    {{8, 150}, {10, 200}, {12, 1200}},   // Blue Gem
+    {{8, 100}, {10, 150}, {12, 1000}},   // Apple
+    {{8, 80}, {10, 120}, {12, 800}},     // Peach
+    {{8, 50}, {10, 100}, {12, 500}},     // Watermelon
+    {{8, 40}, {10, 90}, {12, 400}},      // Grapes
+    {{8, 25}, {10, 75}, {12, 200}},      // Banana
+    {{3, 300}, {5, 500}, {6, 10000}}     // Lolipop
+}};
+
+const std::map<uint32_t,ItemDetails> ItemKey{                               // Item map -> ID : Name and Icon
+        {0, {"Red", "❤️", allPayouts[0]}},
+        {1, {"Pink", "🩷", allPayouts[1]}},
+        {2, {"Green", "💚", allPayouts[2]}},
+        {3, {"Blue", "💙", allPayouts[3]}},
+        {4, {"Apple", "🍎", allPayouts[4]}},
+        {5, {"Peach", "🍑", allPayouts[5]}},
+        {6, {"Watermelon", "🍉", allPayouts[6]}},
+        {7, {"Grapes", "🍇", allPayouts[7]}},
+        {8, {"Banana", "🍌", allPayouts[8]}},
+        {9, {"Lolipop", "🍭", allPayouts[9]}},
+};
+
 extern const std::array<std::map<uint32_t, uint32_t>, totalItems> allPayouts;
 
 // Class

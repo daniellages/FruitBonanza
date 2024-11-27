@@ -69,9 +69,11 @@ uint32_t findMinPayout(const std::map<uint32_t, uint32_t>& payouts, uint32_t cou
     return correspondingPayout;
 }
 
-uint32_t calculatePayout(const std::array<std::array<GridItem, 6>, 5>& grid) {
+uint32_t calculatePayout(const std::array<std::array<GridItem, 6>, 5>& grid, std::ostringstream& printStr) {
     uint32_t totalPayout = 0;
     std::map<uint32_t, uint32_t> itemCounts;    // Map to store the frequency of each item
+
+    printStr << "Receipt: " << std::endl;
 
     // Count the occurences
     for(size_t i=0; i<5; ++i){
@@ -83,8 +85,13 @@ uint32_t calculatePayout(const std::array<std::array<GridItem, 6>, 5>& grid) {
 
     // Calculate the payout with threshold
     for(const auto& [itemID, count] : itemCounts) {
+        uint32_t tempPayout;                        // Just to print each payout separatly
         const auto& payouts = allPayouts[itemID];
-        totalPayout += findMinPayout(payouts, count);
+        tempPayout = findMinPayout(payouts, count);
+        if(tempPayout != 0) {
+            printStr << std::to_string(count) << "x " << ItemKey.at(itemID).icon << " " << ItemKey.at(itemID).name << " -> " << std::to_string(tempPayout) << "%" << std::endl;
+            totalPayout += tempPayout;
+        } 
     }
 
     return totalPayout;
