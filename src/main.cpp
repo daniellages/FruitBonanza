@@ -7,6 +7,8 @@
 //  everything that goes to the terminal has to go all ta once
 
 // TODO:
+//  Make payout know what was the count of items and the math, if there were more than one price
+//  Add output string spaces somewhere else
 
 int main() {
     // Allow emoji output
@@ -27,9 +29,19 @@ int main() {
         item.printDetails(false, printStr);
     }
 
+    // Add space
+    printStr << std::endl;
+
     // Generate 6x5 grid random
     std::array<std::array<GridItem, 6>, 5> view = generateView(items, dist);
     printGrid(view, printStr);
+
+    // Add space
+    printStr << std::endl;
+
+    // Payout
+    uint32_t totalPayout = calculatePayout(view);
+    printPayout(totalPayout, printStr);
 
     // Single print output
     std::string outputStr = printStr.str();

@@ -32,3 +32,18 @@ std::array<std::array<GridItem, 6>, 5> generateView(std::array<GridItem, 10>& it
 
     return view;
 }
+
+// Print Grid
+void printGrid(const std::array<std::array<GridItem, 6>, 5>& grid, std::ostringstream& printStr) {
+    for(const auto& row : grid) {
+        for(const auto& item : row) {
+            printStr << item.getIcon() << " | ";
+        }
+        printStr << std::endl;
+    }
+}
+
+// Print Payout
+void printPayout(uint32_t payout, std::ostringstream& printStr) {
+    printStr << "Total Payout: " << std::to_string(payout) << std::endl;
+}

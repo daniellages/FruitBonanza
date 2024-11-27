@@ -38,7 +38,4 @@ class GridItem {
         void printDetails(bool printHeader, std::ostringstream& printStr) const;
 };
 
-// Functions
-void printGrid(const std::array<std::array<GridItem, 6>, 5>& grid, std::ostringstream& printStr);
-
 #endif

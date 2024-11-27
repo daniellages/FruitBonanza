@@ -44,11 +44,48 @@ void calculateProbabilities(std::array<GridItem, totalItems>& items){
     std::array<uint32_t, totalItems> weights;
     for(size_t i=0; i<totalItems; ++i){
         uint32_t weight = (invertedPayouts.at(i) * 100) / totalWeight;  // Convert to percentage
-        weights.at(i) = (weight == 0 ? 1 : weight);               // Probability can't be 0
+        weights.at(i) = (weight == 0 ? 1 : weight);                     // Probability can't be 0
     }
 
     // Update item's probability
     for(auto& item : items) {
         item.setProbability(weights.at(item.getID()));
     }
+}
+
+uint32_t findMinPayout(const std::map<uint32_t, uint32_t>& payouts, uint32_t count) {
+    uint32_t minDif = std::numeric_limits<uint32_t>::max(); // Start with the largest int value
+    uint32_t correspondingPayout = 0;
+
+    for(const auto& [threshold, payout] : payouts) {
+        if(count >= threshold) {
+            uint32_t dif = count - threshold;
+            if(dif < minDif) {
+                correspondingPayout = payout;
+            }
+        }
+    }
+
+    return correspondingPayout;
+}
+
+uint32_t calculatePayout(const std::array<std::array<GridItem, 6>, 5>& grid) {
+    uint32_t totalPayout = 0;
+    std::map<uint32_t, uint32_t> itemCounts;    // Map to store the frequency of each item
+
+    // Count the occurences
+    for(size_t i=0; i<5; ++i){
+        for(size_t j=0; j<6; ++j){
+            uint32_t itemID = grid.at(i).at(j).getID();
+            itemCounts[itemID]++;
+        }
+    }
+
+    // Calculate the payout with threshold
+    for(const auto& [itemID, count] : itemCounts) {
+        const auto& payouts = allPayouts[itemID];
+        totalPayout += findMinPayout(payouts, count);
+    }
+
+    return totalPayout;
 }

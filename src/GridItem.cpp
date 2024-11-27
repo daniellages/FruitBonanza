@@ -9,7 +9,7 @@ struct ItemDetails {
 
 // Define allPayouts
 const std::array<std::map<uint32_t, uint32_t>, totalItems> allPayouts = {{
-    {{8, 1000}, {10, 2500}, {12, 5000}},  // Red Gem
+    {{8, 1000}, {10, 2500}, {12, 5000}}, // Red Gem
     {{8, 250}, {10, 1000}, {12, 2500}},  // Pink Gem
     {{8, 200}, {10, 500}, {12, 1500}},   // Green Gem
     {{8, 150}, {10, 200}, {12, 1200}},   // Blue Gem
@@ -86,13 +86,3 @@ void GridItem::printDetails(bool printHeader, std::ostringstream& printStr) cons
     printStr << std::setw(15) << probability
              << ItemKey.at(id).icon << std::endl;
 };
-
-// Print Grid
-void printGrid(const std::array<std::array<GridItem, 6>, 5>& grid, std::ostringstream& printStr) {
-    for(const auto& row : grid) {
-        for(const auto& item : row) {
-            printStr << item.getIcon() << " | ";
-        }
-        printStr << std::endl;
-    }
-}
