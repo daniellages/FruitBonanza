@@ -84,12 +84,12 @@ clean: CMakeFiles/FruitBonanza.dir/clean
 CMakeFiles/FruitBonanza.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FruitBonanza.dir\build.make CMakeFiles/FruitBonanza.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FruitBonanza.dir\build.make CMakeFiles/FruitBonanza.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Daniel\Documents\FruitBonanza\build\CMakeFiles --progress-num=1,2,3,4 "Built target FruitBonanza"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Daniel\Documents\FruitBonanza\build\CMakeFiles --progress-num=1,2,3,4,5 "Built target FruitBonanza"
 .PHONY : CMakeFiles/FruitBonanza.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/FruitBonanza.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Daniel\Documents\FruitBonanza\build\CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Daniel\Documents\FruitBonanza\build\CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/FruitBonanza.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Daniel\Documents\FruitBonanza\build\CMakeFiles 0
 .PHONY : CMakeFiles/FruitBonanza.dir/rule

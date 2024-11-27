@@ -7,5 +7,6 @@
 // Other headers
 #include "GridItem.hpp"
 #include "probabilities.hpp"
+#include "setup.hpp"
 
 #endif

@@ -13,20 +13,8 @@ int main() {
     SetConsoleOutputCP(CP_UTF8);
     setvbuf(stdout, nullptr, _IOFBF, 1000);
 
-    // Create GridItems
-    GridItem redGem(0);
-    GridItem pinkGem(1);
-    GridItem greenGem(2);
-    GridItem blueGem(3);
-    GridItem apple(4);
-    GridItem peach(5);
-    GridItem watermelon(6);
-    GridItem grapes(7);
-    GridItem banana(8);
-    GridItem lolipop(9);
-
-    // Store items in a vector
-    std::array<GridItem, 10> items = {redGem, pinkGem, greenGem, blueGem, apple, peach, watermelon, grapes, banana, lolipop};
+    // Get array with items
+    std::array<GridItem, 10> items = setupItems();
 
     // Initialize discrete distribution
     calculateProbabilities(items);
@@ -39,9 +27,9 @@ int main() {
         item.printDetails(false, printStr);
     }
 
-    // Print random
-    printStr << "\nRandom Choosen: " << std::endl;
-    getRandom(items, dist).printDetails(false, printStr);
+    // Generate 6x5 grid random
+    std::array<std::array<GridItem, 6>, 5> view = generateView(items, dist);
+    printGrid(view, printStr);
 
     // Single print output
     std::string outputStr = printStr.str();

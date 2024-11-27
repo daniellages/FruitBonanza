@@ -152,6 +152,30 @@ helper/probabilities.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FruitBonanza.dir\build.make CMakeFiles/FruitBonanza.dir/helper/probabilities.cpp.s
 .PHONY : helper/probabilities.cpp.s
 
+helper/setup.obj: helper/setup.cpp.obj
+.PHONY : helper/setup.obj
+
+# target to build an object file
+helper/setup.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FruitBonanza.dir\build.make CMakeFiles/FruitBonanza.dir/helper/setup.cpp.obj
+.PHONY : helper/setup.cpp.obj
+
+helper/setup.i: helper/setup.cpp.i
+.PHONY : helper/setup.i
+
+# target to preprocess a source file
+helper/setup.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FruitBonanza.dir\build.make CMakeFiles/FruitBonanza.dir/helper/setup.cpp.i
+.PHONY : helper/setup.cpp.i
+
+helper/setup.s: helper/setup.cpp.s
+.PHONY : helper/setup.s
+
+# target to generate assembly for a file
+helper/setup.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FruitBonanza.dir\build.make CMakeFiles/FruitBonanza.dir/helper/setup.cpp.s
+.PHONY : helper/setup.cpp.s
+
 src/GridItem.obj: src/GridItem.cpp.obj
 .PHONY : src/GridItem.obj
 
@@ -212,6 +236,9 @@ help:
 	@echo ... helper/probabilities.obj
 	@echo ... helper/probabilities.i
 	@echo ... helper/probabilities.s
+	@echo ... helper/setup.obj
+	@echo ... helper/setup.i
+	@echo ... helper/setup.s
 	@echo ... src/GridItem.obj
 	@echo ... src/GridItem.i
 	@echo ... src/GridItem.s

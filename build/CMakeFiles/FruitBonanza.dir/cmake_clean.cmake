@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/FruitBonanza.dir/helper/probabilities.cpp.obj"
   "CMakeFiles/FruitBonanza.dir/helper/probabilities.cpp.obj.d"
+  "CMakeFiles/FruitBonanza.dir/helper/setup.cpp.obj"
+  "CMakeFiles/FruitBonanza.dir/helper/setup.cpp.obj.d"
   "CMakeFiles/FruitBonanza.dir/src/GridItem.cpp.obj"
   "CMakeFiles/FruitBonanza.dir/src/GridItem.cpp.obj.d"
   "CMakeFiles/FruitBonanza.dir/src/main.cpp.obj"

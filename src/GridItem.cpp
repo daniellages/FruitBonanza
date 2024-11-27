@@ -32,16 +32,31 @@ std::map<uint32_t,ItemDetails> ItemKey{
         {6, {"Watermelon", "🍉", allPayouts[6]}},
         {7, {"Grapes", "🍇", allPayouts[7]}},
         {8, {"Banana", "🍌", allPayouts[8]}},
-        {9, {"Lolipop", "🍭", allPayouts[9]}}
+        {9, {"Lolipop", "🍭", allPayouts[9]}},
 };
 
 // GridItem Class Functions
 
 // Constructor
+GridItem::GridItem() {
+    id = 0;
+    payouts = ItemKey.at(0).payout;
+    probability = 0;
+}
+
 GridItem::GridItem(const uint32_t itemID) {
     id = itemID;
     payouts = ItemKey.at(id).payout;
     probability = 0;
+}
+
+// Getters
+std::string GridItem::getName() const {
+    return ItemKey.at(id).name;
+}
+
+std::string GridItem::getIcon() const {
+    return ItemKey.at(id).icon;
 }
 
 // DEBUG: Print Details
@@ -53,7 +68,7 @@ void GridItem::printDetails(bool printHeader, std::ostringstream& printStr) cons
                  << std::setw(15) << "Probability"
                  << "Icon" << std::endl;
         // Separator
-        printStr << std::string(85, '-') << std::endl;
+        printStr << std::string(80, '-') << std::endl;
         return;
     }
 
@@ -71,3 +86,13 @@ void GridItem::printDetails(bool printHeader, std::ostringstream& printStr) cons
     printStr << std::setw(15) << probability
              << ItemKey.at(id).icon << std::endl;
 };
+
+// Print Grid
+void printGrid(const std::array<std::array<GridItem, 6>, 5>& grid, std::ostringstream& printStr) {
+    for(const auto& row : grid) {
+        for(const auto& item : row) {
+            printStr << item.getIcon() << " | ";
+        }
+        printStr << std::endl;
+    }
+}

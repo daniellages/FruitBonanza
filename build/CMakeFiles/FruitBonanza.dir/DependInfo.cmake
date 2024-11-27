@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/Daniel/Documents/FruitBonanza/helper/probabilities.cpp" "CMakeFiles/FruitBonanza.dir/helper/probabilities.cpp.obj" "gcc" "CMakeFiles/FruitBonanza.dir/helper/probabilities.cpp.obj.d"
+  "C:/Users/Daniel/Documents/FruitBonanza/helper/setup.cpp" "CMakeFiles/FruitBonanza.dir/helper/setup.cpp.obj" "gcc" "CMakeFiles/FruitBonanza.dir/helper/setup.cpp.obj.d"
   "C:/Users/Daniel/Documents/FruitBonanza/src/GridItem.cpp" "CMakeFiles/FruitBonanza.dir/src/GridItem.cpp.obj" "gcc" "CMakeFiles/FruitBonanza.dir/src/GridItem.cpp.obj.d"
   "C:/Users/Daniel/Documents/FruitBonanza/src/main.cpp" "CMakeFiles/FruitBonanza.dir/src/main.cpp.obj" "gcc" "CMakeFiles/FruitBonanza.dir/src/main.cpp.obj.d"
   )

@@ -86,11 +86,26 @@ CMakeFiles/FruitBonanza.dir/helper/probabilities.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FruitBonanza.dir/helper/probabilities.cpp.s"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Daniel\Documents\FruitBonanza\helper\probabilities.cpp -o CMakeFiles\FruitBonanza.dir\helper\probabilities.cpp.s
 
+CMakeFiles/FruitBonanza.dir/helper/setup.cpp.obj: CMakeFiles/FruitBonanza.dir/flags.make
+CMakeFiles/FruitBonanza.dir/helper/setup.cpp.obj: CMakeFiles/FruitBonanza.dir/includes_CXX.rsp
+CMakeFiles/FruitBonanza.dir/helper/setup.cpp.obj: C:/Users/Daniel/Documents/FruitBonanza/helper/setup.cpp
+CMakeFiles/FruitBonanza.dir/helper/setup.cpp.obj: CMakeFiles/FruitBonanza.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Daniel\Documents\FruitBonanza\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/FruitBonanza.dir/helper/setup.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FruitBonanza.dir/helper/setup.cpp.obj -MF CMakeFiles\FruitBonanza.dir\helper\setup.cpp.obj.d -o CMakeFiles\FruitBonanza.dir\helper\setup.cpp.obj -c C:\Users\Daniel\Documents\FruitBonanza\helper\setup.cpp
+
+CMakeFiles/FruitBonanza.dir/helper/setup.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FruitBonanza.dir/helper/setup.cpp.i"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Daniel\Documents\FruitBonanza\helper\setup.cpp > CMakeFiles\FruitBonanza.dir\helper\setup.cpp.i
+
+CMakeFiles/FruitBonanza.dir/helper/setup.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FruitBonanza.dir/helper/setup.cpp.s"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Daniel\Documents\FruitBonanza\helper\setup.cpp -o CMakeFiles\FruitBonanza.dir\helper\setup.cpp.s
+
 CMakeFiles/FruitBonanza.dir/src/GridItem.cpp.obj: CMakeFiles/FruitBonanza.dir/flags.make
 CMakeFiles/FruitBonanza.dir/src/GridItem.cpp.obj: CMakeFiles/FruitBonanza.dir/includes_CXX.rsp
 CMakeFiles/FruitBonanza.dir/src/GridItem.cpp.obj: C:/Users/Daniel/Documents/FruitBonanza/src/GridItem.cpp
 CMakeFiles/FruitBonanza.dir/src/GridItem.cpp.obj: CMakeFiles/FruitBonanza.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Daniel\Documents\FruitBonanza\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/FruitBonanza.dir/src/GridItem.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Daniel\Documents\FruitBonanza\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/FruitBonanza.dir/src/GridItem.cpp.obj"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FruitBonanza.dir/src/GridItem.cpp.obj -MF CMakeFiles\FruitBonanza.dir\src\GridItem.cpp.obj.d -o CMakeFiles\FruitBonanza.dir\src\GridItem.cpp.obj -c C:\Users\Daniel\Documents\FruitBonanza\src\GridItem.cpp
 
 CMakeFiles/FruitBonanza.dir/src/GridItem.cpp.i: cmake_force
@@ -105,7 +120,7 @@ CMakeFiles/FruitBonanza.dir/src/main.cpp.obj: CMakeFiles/FruitBonanza.dir/flags.
 CMakeFiles/FruitBonanza.dir/src/main.cpp.obj: CMakeFiles/FruitBonanza.dir/includes_CXX.rsp
 CMakeFiles/FruitBonanza.dir/src/main.cpp.obj: C:/Users/Daniel/Documents/FruitBonanza/src/main.cpp
 CMakeFiles/FruitBonanza.dir/src/main.cpp.obj: CMakeFiles/FruitBonanza.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Daniel\Documents\FruitBonanza\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/FruitBonanza.dir/src/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Daniel\Documents\FruitBonanza\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/FruitBonanza.dir/src/main.cpp.obj"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FruitBonanza.dir/src/main.cpp.obj -MF CMakeFiles\FruitBonanza.dir\src\main.cpp.obj.d -o CMakeFiles\FruitBonanza.dir\src\main.cpp.obj -c C:\Users\Daniel\Documents\FruitBonanza\src\main.cpp
 
 CMakeFiles/FruitBonanza.dir/src/main.cpp.i: cmake_force
@@ -119,6 +134,7 @@ CMakeFiles/FruitBonanza.dir/src/main.cpp.s: cmake_force
 # Object files for target FruitBonanza
 FruitBonanza_OBJECTS = \
 "CMakeFiles/FruitBonanza.dir/helper/probabilities.cpp.obj" \
+"CMakeFiles/FruitBonanza.dir/helper/setup.cpp.obj" \
 "CMakeFiles/FruitBonanza.dir/src/GridItem.cpp.obj" \
 "CMakeFiles/FruitBonanza.dir/src/main.cpp.obj"
 
@@ -126,13 +142,14 @@ FruitBonanza_OBJECTS = \
 FruitBonanza_EXTERNAL_OBJECTS =
 
 bin/main.exe: CMakeFiles/FruitBonanza.dir/helper/probabilities.cpp.obj
+bin/main.exe: CMakeFiles/FruitBonanza.dir/helper/setup.cpp.obj
 bin/main.exe: CMakeFiles/FruitBonanza.dir/src/GridItem.cpp.obj
 bin/main.exe: CMakeFiles/FruitBonanza.dir/src/main.cpp.obj
 bin/main.exe: CMakeFiles/FruitBonanza.dir/build.make
 bin/main.exe: CMakeFiles/FruitBonanza.dir/linkLibs.rsp
 bin/main.exe: CMakeFiles/FruitBonanza.dir/objects1.rsp
 bin/main.exe: CMakeFiles/FruitBonanza.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Daniel\Documents\FruitBonanza\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable bin\main.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Daniel\Documents\FruitBonanza\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable bin\main.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\FruitBonanza.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

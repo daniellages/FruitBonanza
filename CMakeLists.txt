@@ -1,4 +1,4 @@
-# cmake -G "MinGW Makefiles" ..
+# cmake -G "MinGW Makefiles" ../
 # cmake --build .
 
 # Define the cmake version

@@ -1,6 +1,6 @@
-CMakeFiles/FruitBonanza.dir/src/main.cpp.obj: \
- C:\Users\Daniel\Documents\FruitBonanza\src\main.cpp \
- C:\Users\Daniel\Documents\FruitBonanza\src\main.hpp \
+CMakeFiles/FruitBonanza.dir/helper/setup.cpp.obj: \
+ C:\Users\Daniel\Documents\FruitBonanza\helper\setup.cpp \
+ C:\Users\Daniel\Documents\FruitBonanza\helper\setup.hpp \
  C:/Users/Daniel/Documents/FruitBonanza/include/pch.hpp \
  C:/msys64/ucrt64/include/c++/13.1.0/iostream \
  C:/msys64/ucrt64/include/c++/13.1.0/bits/requires_hosted.h \
@@ -390,8 +390,5 @@ CMakeFiles/FruitBonanza.dir/src/main.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.1.0/bits/locale_facets_nonio.tcc \
  C:/msys64/ucrt64/include/c++/13.1.0/bits/locale_conv.h \
  C:/msys64/ucrt64/include/c++/13.1.0/bits/quoted_string.h \
- C:\Users\Daniel\Documents\FruitBonanza\src\GridItem.hpp \
- C:/Users/Daniel/Documents/FruitBonanza/helper/probabilities.hpp \
  C:/Users/Daniel/Documents/FruitBonanza/src/GridItem.hpp \
- C:/Users/Daniel/Documents/FruitBonanza/helper/setup.hpp \
- C:/Users/Daniel/Documents/FruitBonanza/helper/probabilities.hpp
+ C:\Users\Daniel\Documents\FruitBonanza\helper\probabilities.hpp
