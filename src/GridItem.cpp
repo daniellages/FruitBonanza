@@ -2,8 +2,8 @@
 
 // Constructor
 GridItem::GridItem() {
-    id = 0;
-    payouts = ItemKey.at(0).payout;
+    id = 10;
+    payouts = ItemKey.at(id).payout;
     probability = 0;
 }
 

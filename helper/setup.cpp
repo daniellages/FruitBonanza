@@ -21,12 +21,12 @@ std::array<GridItem, 10> setupItems() {
 }
 
 // Generates a grid 6x5 of random items
-std::array<std::array<GridItem, 6>, 5> generateView(std::array<GridItem, 10>& items, std::discrete_distribution<>& dist) {
+std::array<std::array<GridItem, 6>, 5> generateView() {
     std::array<std::array<GridItem, 6>, 5> view;
 
     for(size_t i=0; i<5; ++i) {     // Rows
         for(size_t j=0; j<6; ++j) { // Cols
-            view[i][j] = getRandom(items, dist);
+            view[i][j] = getRandom();
         }
     }
 
@@ -41,9 +41,4 @@ void printGrid(const std::array<std::array<GridItem, 6>, 5>& grid, std::ostrings
         }
         printStr << std::endl;
     }
-}
-
-// Print Payout
-void printPayout(uint32_t payout, std::ostringstream& printStr) {
-    printStr << "Total Payout: " << std::to_string(payout) << "%" << std::endl;
 }

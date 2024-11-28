@@ -1,16 +1,19 @@
 #include "probabilities.hpp"
 
 // TODO:
-//  Swap for loop line 9 for const auto& item: items
-//  Same for line 32
+//  Replace i and j in forloop for row and col
+
+// Variables
+std::array<GridItem, totalItems> itemsLocal; 
+std::discrete_distribution<> dist;
 
 // Initiate Discrete Distribution
-std::discrete_distribution<> createDistribution(const std::array<GridItem, totalItems>& items) {
+void createDistribution() {
     std::array<uint32_t, totalItems> probabilities;
     for(size_t i=0; i<totalItems; ++i) {
-        probabilities.at(i) = items.at(i).getProbability();
+        probabilities.at(i) = itemsLocal.at(i).getProbability();
     }
-    return std::discrete_distribution<>(probabilities.begin(), probabilities.end());
+    dist =  std::discrete_distribution<>(probabilities.begin(), probabilities.end());
 }
 
 // Random number generator
@@ -18,10 +21,10 @@ std::random_device rd;
 std::mt19937 gen(rd());
 
 // Get Random
-GridItem getRandom(const std::array<GridItem, totalItems>& items, std::discrete_distribution<>& dist) {
+GridItem getRandom() {
     // Select random index
     uint32_t selectedIdx = dist(gen);
-    return items.at(selectedIdx);
+    return itemsLocal.at(selectedIdx);
 }
 
 // Calculate the weights
@@ -51,6 +54,9 @@ void calculateProbabilities(std::array<GridItem, totalItems>& items){
     for(auto& item : items) {
         item.setProbability(weights.at(item.getID()));
     }
+
+    // Store locally item's address
+    itemsLocal = items;
 }
 
 uint32_t findMinPayout(const std::map<uint32_t, uint32_t>& payouts, uint32_t count) {
@@ -69,9 +75,9 @@ uint32_t findMinPayout(const std::map<uint32_t, uint32_t>& payouts, uint32_t cou
     return correspondingPayout;
 }
 
-uint32_t calculatePayout(const std::array<std::array<GridItem, 6>, 5>& grid, std::ostringstream& printStr) {
+uint32_t calculatePayout(const std::array<std::array<GridItem, 6>, 5>& grid, std::ostringstream& printStr, std::set<std::pair<uint32_t, uint32_t>>& winningPositions) {
     uint32_t totalPayout = 0;
-    std::map<uint32_t, uint32_t> itemCounts;    // Map to store the frequency of each item
+    std::map<uint32_t, uint32_t> itemCounts;                    // Map to store the frequency of each item
 
     printStr << "Receipt: " << std::endl;
 
@@ -85,14 +91,30 @@ uint32_t calculatePayout(const std::array<std::array<GridItem, 6>, 5>& grid, std
 
     // Calculate the payout with threshold
     for(const auto& [itemID, count] : itemCounts) {
-        uint32_t tempPayout;                        // Just to print each payout separatly
+        uint32_t currentPayout;
         const auto& payouts = allPayouts[itemID];
-        tempPayout = findMinPayout(payouts, count);
-        if(tempPayout != 0) {
-            printStr << std::to_string(count) << "x " << ItemKey.at(itemID).icon << " " << ItemKey.at(itemID).name << " -> " << std::to_string(tempPayout) << "%" << std::endl;
-            totalPayout += tempPayout;
+        currentPayout = findMinPayout(payouts, count);
+
+        // Winning Item
+        if(currentPayout != 0) {
+            printStr << count << "x " << ItemKey.at(itemID).icon << " " << ItemKey.at(itemID).name << " -> " << currentPayout/100.0 << "€" << std::endl;
+            totalPayout += currentPayout;
+
+            // Add positions of this winning item to the set
+            for(size_t i=0; i<5; ++i){
+                for(size_t j=0; j<6; ++j){
+                    if(grid.at(i).at(j).getID() == itemID) {
+                        winningPositions.insert({i, j});
+                    }
+                }
+            }
         } 
     }
 
     return totalPayout;
+}
+
+// Print Payout
+void printPayout(uint32_t payout, std::ostringstream& printStr) {
+    printStr << "Total Payout: " << payout/100.0 << "€\n" << std::endl;
 }

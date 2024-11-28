@@ -20,10 +20,16 @@ int main() {
 
     // Initialize discrete distribution
     calculateProbabilities(items);
-    std::discrete_distribution<> dist = createDistribution(items);
+    createDistribution();
+
+    // Create winning Positions variable
+    std::set<std::pair<uint32_t, uint32_t>> winningPositions;
+
+    // Create output string
+    std::ostringstream printStr;
+    printStr << std::fixed << std::setprecision(2);
 
     // DEBUG: Print Details
-    std::ostringstream printStr;
     items.at(0).printDetails(true, printStr);    // Print Header
     for(const auto& item : items) {
         item.printDetails(false, printStr);
@@ -33,15 +39,34 @@ int main() {
     printStr << std::endl;
 
     // Generate 6x5 grid random
-    std::array<std::array<GridItem, 6>, 5> view = generateView(items, dist);
+    std::array<std::array<GridItem, 6>, 5> view = generateView();
     printGrid(view, printStr);
 
     // Add space
     printStr << std::endl;
 
     // Payout
-    uint32_t totalPayout = calculatePayout(view, printStr);
+    uint32_t totalPayout = calculatePayout(view, printStr, winningPositions);
     printPayout(totalPayout, printStr);
+
+    // Tumble Feature
+    if(totalPayout != 0) {      // Payout activates Tumble Feature
+        uint32_t prevTotalPayout = 0;
+        while(prevTotalPayout != totalPayout) {
+            prevTotalPayout = totalPayout;
+
+            // Will be replaced by tumble()
+            removeWinningItems(view, winningPositions, printStr);
+            applyGravity(view, printStr);
+            generateNewItems(view, printStr);
+
+            // Add space
+            printStr << std::endl;
+
+            totalPayout += calculatePayout(view, printStr, winningPositions);
+            printPayout(totalPayout, printStr);
+        }
+    }
 
     // Single print output
     std::string outputStr = printStr.str();

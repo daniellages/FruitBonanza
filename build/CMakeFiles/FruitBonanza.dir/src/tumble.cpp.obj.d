@@ -1,6 +1,6 @@
-CMakeFiles/FruitBonanza.dir/src/GridItem.cpp.obj: \
- C:\Users\Daniel\Documents\FruitBonanza\src\GridItem.cpp \
- C:\Users\Daniel\Documents\FruitBonanza\src\GridItem.hpp \
+CMakeFiles/FruitBonanza.dir/src/tumble.cpp.obj: \
+ C:\Users\Daniel\Documents\FruitBonanza\src\tumble.cpp \
+ C:\Users\Daniel\Documents\FruitBonanza\src\tumble.hpp \
  C:/Users/Daniel/Documents/FruitBonanza/include/pch.hpp \
  C:/msys64/ucrt64/include/c++/13.1.0/iostream \
  C:/msys64/ucrt64/include/c++/13.1.0/bits/requires_hosted.h \
@@ -400,4 +400,9 @@ CMakeFiles/FruitBonanza.dir/src/GridItem.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.1.0/thread \
  C:/msys64/ucrt64/include/c++/13.1.0/bits/std_thread.h \
  C:/msys64/ucrt64/include/c++/13.1.0/bits/unique_ptr.h \
- C:/msys64/ucrt64/include/c++/13.1.0/bits/this_thread_sleep.h
+ C:/msys64/ucrt64/include/c++/13.1.0/bits/this_thread_sleep.h \
+ C:\Users\Daniel\Documents\FruitBonanza\src\GridItem.hpp \
+ C:/Users/Daniel/Documents/FruitBonanza/helper/setup.hpp \
+ C:/Users/Daniel/Documents/FruitBonanza/src/GridItem.hpp \
+ C:/Users/Daniel/Documents/FruitBonanza/helper/probabilities.hpp \
+ C:/Users/Daniel/Documents/FruitBonanza/helper/probabilities.hpp

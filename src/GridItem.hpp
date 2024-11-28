@@ -16,7 +16,7 @@ struct ItemDetails {                                                        // M
     std::map<uint32_t, uint32_t> payout;
 };
 
-const std::array<std::map<uint32_t, uint32_t>, totalItems> allPayouts = {{  // Define allPayouts
+const std::array<std::map<uint32_t, uint32_t>, totalItems+1> allPayouts = {{  // Define allPayouts
     {{8, 1000}, {10, 2500}, {12, 5000}}, // Red Gem
     {{8, 250}, {10, 1000}, {12, 2500}},  // Pink Gem
     {{8, 200}, {10, 500}, {12, 1500}},   // Green Gem
@@ -26,7 +26,8 @@ const std::array<std::map<uint32_t, uint32_t>, totalItems> allPayouts = {{  // D
     {{8, 50}, {10, 100}, {12, 500}},     // Watermelon
     {{8, 40}, {10, 90}, {12, 400}},      // Grapes
     {{8, 25}, {10, 75}, {12, 200}},      // Banana
-    {{3, 300}, {5, 500}, {6, 10000}}     // Lolipop
+    {{3, 300}, {5, 500}, {6, 10000}},    // Lolipop
+    {{0, 0}, {0, 0}, {0, 0}}             // Void Item
 }};
 
 const std::map<uint32_t,ItemDetails> ItemKey{                               // Item map -> ID : Name and Icon
@@ -40,9 +41,10 @@ const std::map<uint32_t,ItemDetails> ItemKey{                               // I
         {7, {"Grapes", "🍇", allPayouts[7]}},
         {8, {"Banana", "🍌", allPayouts[8]}},
         {9, {"Lolipop", "🍭", allPayouts[9]}},
+        {10,{"NULL", "\u274C", allPayouts[10]}}
 };
 
-extern const std::array<std::map<uint32_t, uint32_t>, totalItems> allPayouts;
+extern const std::array<std::map<uint32_t, uint32_t>, totalItems+1> allPayouts;
 
 // Class
 class GridItem {
@@ -53,7 +55,7 @@ class GridItem {
     
     public:
         // Constructor
-        GridItem(); // Default ID=0
+        GridItem();                             // Void Item
         GridItem(const uint32_t itemID);
 
         // Getters
@@ -62,6 +64,7 @@ class GridItem {
         uint32_t getProbability() const {return probability;}
         std::string getName() const;
         std::string getIcon() const;
+        bool isEmpty() const {return (id == 10) ? true : false;}            // Check if it is void item
 
         // Setters
         void setProbability(uint32_t itemProbability) {probability = itemProbability;}

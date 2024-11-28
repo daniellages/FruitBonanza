@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/FruitBonanza.dir/src/GridItem.cpp.obj.d"
   "CMakeFiles/FruitBonanza.dir/src/main.cpp.obj"
   "CMakeFiles/FruitBonanza.dir/src/main.cpp.obj.d"
+  "CMakeFiles/FruitBonanza.dir/src/tumble.cpp.obj"
+  "CMakeFiles/FruitBonanza.dir/src/tumble.cpp.obj.d"
   "bin/main.exe"
   "bin/main.exe.manifest"
   "bin/main.pdb"

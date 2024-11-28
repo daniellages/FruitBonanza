@@ -8,5 +8,6 @@
 #include "GridItem.hpp"
 #include "probabilities.hpp"
 #include "setup.hpp"
+#include "tumble.hpp"
 
 #endif

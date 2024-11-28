@@ -224,6 +224,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FruitBonanza.dir\build.make CMakeFiles/FruitBonanza.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/tumble.obj: src/tumble.cpp.obj
+.PHONY : src/tumble.obj
+
+# target to build an object file
+src/tumble.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FruitBonanza.dir\build.make CMakeFiles/FruitBonanza.dir/src/tumble.cpp.obj
+.PHONY : src/tumble.cpp.obj
+
+src/tumble.i: src/tumble.cpp.i
+.PHONY : src/tumble.i
+
+# target to preprocess a source file
+src/tumble.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FruitBonanza.dir\build.make CMakeFiles/FruitBonanza.dir/src/tumble.cpp.i
+.PHONY : src/tumble.cpp.i
+
+src/tumble.s: src/tumble.cpp.s
+.PHONY : src/tumble.s
+
+# target to generate assembly for a file
+src/tumble.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FruitBonanza.dir\build.make CMakeFiles/FruitBonanza.dir/src/tumble.cpp.s
+.PHONY : src/tumble.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -245,6 +269,9 @@ help:
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/tumble.obj
+	@echo ... src/tumble.i
+	@echo ... src/tumble.s
 .PHONY : help
 
 
